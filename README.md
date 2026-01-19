@@ -18,35 +18,41 @@ Script to demultiplexing Illumina NGS libraries from Nanopore sequensing fastq f
 
 
 # **Example run:**
-*python demultiplex_v0.15.py \
+```
+python demultiplex_v0.15.py \
 -i input.fastq.gz \
 -b base.xlsx \
 -x Index.xlsx \
 -o results \
 -t 16 \
 --batch 50000 \
---max-excel-rows 1000000*
+--max-excel-rows 1000000
+```
 
 
 # **Command Line Arguments Description Default**
-* -i, --input FASTQ or FASTQ.GZ input file is required
-* -b, --base base.xlsx file with indexes (Name, Forward, Reverse) is required
-* -x, --index Index.xlsx file with sample table (Sample, S5, N7) is required
-* -o, --output Results folder is required
-* -t, --threads Number of threads 4
-* --batch Batch size for parallel processing 100000
-* --max-excel-rows Maximum number of rows to save in Excel 1,000,000
+```
+-i, --input FASTQ or FASTQ.GZ input file is required
+-b, --base base.xlsx file with indexes (Name, Forward, Reverse) is required
+-x, --index Index.xlsx file with sample table (Sample, S5, N7) is required
+-o, --output Results folder is required
+-t, --threads Number of threads 4
+--batch Batch size for parallel processing 100000
+--max-excel-rows Maximum number of rows to save in Excel 1,000,000
+```
 
 
 # **Results**
 After execution, the following will be created in the results/ folder:
-* reads_scheme.csv — the full distribution scheme (unlimited)
-* reads_scheme.xlsx — the scheme, but only the first --max-excel-rows rows (for quick viewing)
-* sample_summary.csv — sample summary with read counts
-* sample_summary.xlsx — the same summary in Excel
-* SampleName.fastq.gz — individual FASTQs for each sample
-* unmultiplexed.fastq.gz — reads without identification
-* demultiplex.log — script execution log
+```
+reads_scheme.csv — the full distribution scheme (unlimited)
+reads_scheme.xlsx — the scheme, but only the first --max-excel-rows rows (for quick viewing)
+sample_summary.csv — sample summary with read counts
+sample_summary.xlsx — the same summary in Excel
+SampleName.fastq.gz — individual FASTQs for each sample
+unmultiplexed.fastq.gz — reads without identification
+demultiplex.log — script execution log
+```
 
 
 # **Operation Logic**
