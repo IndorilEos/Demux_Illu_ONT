@@ -1,7 +1,7 @@
 # Demux_Illu_ONT
 Script to demultiplexing Illumina NGS libraries from Nanopore sequensing fastq files
 
-*This script is designed to demultiplex FASTQ files (including .gz) by S5 and N7 indices using the base.xlsx and Index.xlsx files*
+*This script is designed to demultiplex FASTQ files (including .gz) by S5 and N7 indexes using the base.xlsx and Index.xlsx files*
 
 
 # **It allows you to:**
