@@ -19,7 +19,7 @@ Script to demultiplexing Illumina NGS libraries from Nanopore sequensing fastq f
 
 # **Example run:**
 ```
-python demultiplex_v0.15.py \
+python Demux_Illu_ONT_v0.15.py \
 -i input.fastq.gz \
 -b base.xlsx \
 -x Index.xlsx \
